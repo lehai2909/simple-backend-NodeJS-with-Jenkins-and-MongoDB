@@ -4,14 +4,23 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "devStart": "SET DEBUG='myapp:*' | npm start"
+    "devStart": "nodemon ./bin/www",
+    "serverStart": "SET DEBUG='myapp:*' | npm run devStart"
   },
   "dependencies": {
+    "async": "^3.2.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "mongoose": "^6.2.3",
     "morgan": "~1.9.1",
-    "pug": "^2.0.4"
+    "pg": "^8.7.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.17.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

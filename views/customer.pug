@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    h1=title 
+    form(action="", method="POST")
+        label(for="first_name") First Name:
+        input(name="first_name", type="text", placeholder="Your First Name", required='true')
+        label(for="last_name") Last Name:
+        input(name="last_name", type="text", placeholder="Your First Name", required='true')
+        label(for="email") Email:
+        input(name="email", type="email", placeholder="Your email", required='true')
+        button(type="submit") Submit
