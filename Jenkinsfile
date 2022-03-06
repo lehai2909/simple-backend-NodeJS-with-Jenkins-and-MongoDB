@@ -15,6 +15,8 @@ pipeline {
         stage('Deploy') { 
             steps {
                 sh 'npm start &' 
+                sleep 1
+                echo $! > .pidfile
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'echo ByeBye'
             }
