@@ -1,9 +1,14 @@
 pipeline {
-    agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
+    agent {
+        docker {
+            image 'node:lts-bullseye-slim' 
+            args '-p 8000:8000' 
+        }
+    }
     stages {
-        stage('build') {
+        stage('Build') { 
             steps {
-                sh 'mvn --version'
+                sh 'npm install' 
             }
         }
     }
