@@ -1,2 +1,2 @@
-# simple-backend-NodeJS--with-Jenkins
+# Simple backend app using NodeJS, Jenkins and MongoDB
 
